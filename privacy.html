@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retainer privacy policy</title>
+  <meta name="description" content="How Retainer handles Google user data.">
+  <style>
+:root {
+  --bg: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #5e5e66;
+  --rule: #e5e5ea;
+  --accent: #b5452a;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #161618; --fg: #f2f2f4; --muted: #a1a1aa; --rule: #2c2c30; --accent: #f08a6c; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 640px; margin: 0 auto; padding: 72px 20px 96px; }
+header { margin-bottom: 40px; }
+.mark { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--accent); margin-right: 10px; vertical-align: 1px; }
+.name { font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: 34px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 16px; }
+h2 { font-size: 19px; margin: 36px 0 8px; }
+p, li { color: var(--fg); }
+.lede { font-size: 20px; color: var(--muted); margin: 0; }
+.muted { color: var(--muted); }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--muted); }
+footer a { margin-right: 16px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><a href="index.html" style="text-decoration:none;color:inherit"><span class="mark" aria-hidden="true"></span><span class="name">Retainer</span></a></header>
+
+    <h1>Privacy policy</h1>
+    <p class="lede">Last updated 23 November 2026.</p>
+
+    <h2>Who this covers</h2>
+    <p>Retainer is a private tool used by a single person, its owner, Josh Davies. It is not offered to the public. This policy describes how Retainer handles data from the Google accounts its owner connects to it.</p>
+
+    <h2>What Retainer accesses</h2>
+    <ul>
+      <li><strong>Gmail, read-only</strong> (<code>gmail.readonly</code>): messages, their headers and labels, and the account's email address.</li>
+      <li>Retainer cannot send, delete or change mail.</li>
+    </ul>
+
+    <h2>How the data is used</h2>
+    <p>Mail is used only to show it to the owner in Retainer and to organise it: working out which client a message belongs to, whether it needs a reply, how urgent it is, and whether it is a receipt. It is not used for advertising, sold, or shared for any other purpose.</p>
+
+    <h2>Where it is stored</h2>
+    <ul>
+      <li>Mail and sign-in tokens are stored on a server the owner controls.</li>
+      <li>They are encrypted at rest, with a separate key for each connected account.</li>
+      <li>Only the owner can reach that server.</li>
+    </ul>
+
+    <h2>Who else processes it</h2>
+    <p>To sort mail, the text of each message is sent to OpenAI's API, which returns judgements such as "needs a reply". OpenAI processes it under its API terms, which do not allow the data to be used to train its models. No other third party receives Google data.</p>
+
+    <h2>Google API Services User Data Policy</h2>
+    <p>Retainer's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+    <h2>Keeping and deleting data</h2>
+    <p>Data is kept while an account stays connected. Disconnecting an account, or revoking Retainer's access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, stops all further access, and the owner deletes that account's stored mail and tokens. To ask about data from your account, contact the address below.</p>
+
+    <footer>
+      <a href="index.html">Home</a>
+      <span>Contact: <a href="mailto:iamjoshuadavies@gmail.com">iamjoshuadavies@gmail.com</a></span>
+    </footer>
+  </main>
+</body>
+</html>

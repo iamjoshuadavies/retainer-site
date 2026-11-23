@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retainer</title>
+  <meta name="description" content="Retainer is a private tool that organises one consultant's mail, calendar and notes by client.">
+  <style>
+:root {
+  --bg: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #5e5e66;
+  --rule: #e5e5ea;
+  --accent: #b5452a;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #161618; --fg: #f2f2f4; --muted: #a1a1aa; --rule: #2c2c30; --accent: #f08a6c; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 640px; margin: 0 auto; padding: 72px 20px 96px; }
+header { margin-bottom: 40px; }
+.mark { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--accent); margin-right: 10px; vertical-align: 1px; }
+.name { font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: 34px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 16px; }
+h2 { font-size: 19px; margin: 36px 0 8px; }
+p, li { color: var(--fg); }
+.lede { font-size: 20px; color: var(--muted); margin: 0; }
+.muted { color: var(--muted); }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--muted); }
+footer a { margin-right: 16px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><span class="mark" aria-hidden="true"></span><span class="name">Retainer</span></header>
+
+    <h1>Mail, calendar and notes, organised by client.</h1>
+    <p class="lede">Retainer is a private tool built for one independent consultant who works for several clients at once.</p>
+
+    <h2>What it does</h2>
+    <ul>
+      <li>Brings mail from several Google accounts into one inbox, with each message tagged by the client it belongs to.</li>
+      <li>Sorts mail by whether it needs a reply, how urgent it is, and whether it is a receipt.</li>
+      <li>Keeps a knowledge base for each client, built from mail, documents and meeting notes.</li>
+    </ul>
+
+    <h2>Who can use it</h2>
+    <p>Retainer is not a public product. It is used only by its owner, with Google accounts the owner controls or has been given by their clients. There is no sign-up, and no one else's data is collected.</p>
+
+    <h2>Google data</h2>
+    <p>Retainer asks Google for read-only access to Gmail. How that data is handled is set out in the <a href="privacy.html">privacy policy</a>.</p>
+
+    <footer>
+      <a href="privacy.html">Privacy policy</a>
+      <span>Contact: <a href="mailto:iamjoshuadavies@gmail.com">iamjoshuadavies@gmail.com</a></span>
+    </footer>
+  </main>
+</body>
+</html>
