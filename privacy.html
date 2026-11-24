@@ -45,7 +45,7 @@ footer a { margin-right: 16px; }
     <header><a href="index.html" style="text-decoration:none;color:inherit"><span class="mark" aria-hidden="true"></span><span class="name">Retainer</span></a></header>
 
     <h1>Privacy policy</h1>
-    <p class="lede">Last updated 23 November 2026 (Gmail access widened to archive and move to the Bin).</p>
+    <p class="lede">Last updated 24 November 2026 (Google Contacts and Drive access added).</p>
 
     <h2>Who this covers</h2>
     <p>Retainer is a private tool used by a single person, its owner, Josh Davies. It is not offered to the public. This policy describes how Retainer handles data from the Google accounts its owner connects to it.</p>
@@ -54,15 +54,18 @@ footer a { margin-right: 16px; }
     <ul>
       <li><strong>Gmail, read and organise</strong> (<code>gmail.modify</code>): messages, their headers and labels, and the account's email address.</li>
       <li>Retainer changes mail only when its owner asks it to: archiving, marking as read or unread, and moving to the Bin, where Gmail keeps mail for 30 days.</li>
-      <li>Retainer does not send mail and does not permanently delete it.</li>
+      <li>Retainer sends mail only when its owner writes a reply and presses Send, and never permanently deletes mail.</li>
+      <li><strong>Google Calendar</strong> (<code>calendar.readonly</code> and <code>calendar.events</code>): the account's calendars and their events (titles, times, places, attendees and notes), so they can be shown together and organised by client. Retainer writes to a calendar only to add plain "busy" blocks that mirror the owner's time on their other calendars, with no details, and keeps them up to date. It does not change or delete any other event, and does not change calendar settings or sharing.</li>
+      <li><strong>Google Contacts and directory, read only</strong> (<code>contacts.readonly</code>, <code>contacts.other.readonly</code> and <code>directory.readonly</code>): the names, photos, job titles and phone numbers of the owner's contacts, of people the owner has emailed, and of colleagues in the account's own organisation, so the people the owner deals with at each client can be shown with their details. Retainer never changes contacts.</li>
+      <li><strong>Google Drive, read only</strong> (<code>drive.readonly</code>): files the owner can open in Drive, so documents that people send or link to can be opened and filed with the right client. Retainer never changes, shares or deletes files.</li>
     </ul>
 
     <h2>How the data is used</h2>
-    <p>Mail is used only to show it to the owner in Retainer and to organise it, in Retainer and, when the owner asks, in Gmail: working out which client a message belongs to, whether it needs a reply, how urgent it is, and whether it is a receipt. It is not used for advertising, sold, or shared for any other purpose.</p>
+    <p>Mail, calendar events, contacts and Drive files are used only to show them to the owner in Retainer and to organise them, in Retainer and, when the owner asks, in Gmail: working out which client a message belongs to, whether it needs a reply, how urgent it is, and whether it is a receipt. It is not used for advertising, sold, or shared for any other purpose.</p>
 
     <h2>Where it is stored</h2>
     <ul>
-      <li>Mail and sign-in tokens are stored on a server the owner controls.</li>
+      <li>Mail, calendar events, contact details, filed documents and sign-in tokens are stored on a server the owner controls.</li>
       <li>They are encrypted at rest, with a separate key for each connected account.</li>
       <li>Only the owner can reach that server.</li>
     </ul>
