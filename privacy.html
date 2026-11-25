@@ -45,7 +45,7 @@ footer a { margin-right: 16px; }
     <header><a href="index.html" style="text-decoration:none;color:inherit"><span class="mark" aria-hidden="true"></span><span class="name">Retainer</span></a></header>
 
     <h1>Privacy policy</h1>
-    <p class="lede">Last updated 24 November 2026 (Google Contacts and Drive access added).</p>
+    <p class="lede">Last updated 25 November 2026 (Calendar and Mail on the owner's Mac added, and how OpenAI is used: summaries, replies and task suggestions).</p>
 
     <h2>Who this covers</h2>
     <p>Retainer is a private tool used by a single person, its owner, Josh Davies. It is not offered to the public. This policy describes how Retainer handles data from the Google accounts its owner connects to it.</p>
@@ -54,14 +54,17 @@ footer a { margin-right: 16px; }
     <ul>
       <li><strong>Gmail, read and organise</strong> (<code>gmail.modify</code>): messages, their headers and labels, and the account's email address.</li>
       <li>Retainer changes mail only when its owner asks it to: archiving, marking as read or unread, and moving to the Bin, where Gmail keeps mail for 30 days.</li>
-      <li>Retainer sends mail only when its owner writes a reply and presses Send, and never permanently deletes mail.</li>
+      <li>Retainer sends mail only when its owner writes a reply or a new email and presses Send, and never permanently deletes mail.</li>
       <li><strong>Google Calendar</strong> (<code>calendar.readonly</code> and <code>calendar.events</code>): the account's calendars and their events (titles, times, places, attendees and notes), so they can be shown together and organised by client. Retainer writes to a calendar only to add plain "busy" blocks that mirror the owner's time on their other calendars, with no details, and keeps them up to date. It does not change or delete any other event, and does not change calendar settings or sharing.</li>
       <li><strong>Google Contacts and directory, read only</strong> (<code>contacts.readonly</code>, <code>contacts.other.readonly</code> and <code>directory.readonly</code>): the names, photos, job titles and phone numbers of the owner's contacts, of people the owner has emailed, and of colleagues in the account's own organisation, so the people the owner deals with at each client can be shown with their details. Retainer never changes contacts.</li>
       <li><strong>Google Drive, read only</strong> (<code>drive.readonly</code>): files the owner can open in Drive, so documents that people send or link to can be opened and filed with the right client. Retainer never changes, shares or deletes files.</li>
     </ul>
 
+    <h2>Calendar and Mail on the owner's Mac</h2>
+    <p>For accounts that only allow Apple's own apps, the Retainer Mac app can read the calendars and Apple Mail inboxes its owner chooses from Calendar and Mail on that Mac, with the owner's permission in macOS. It reads events, and the sender, subject and date of unread messages in the chosen inboxes (never message bodies). This stays on the Mac: it is not sent to Retainer's server or to OpenAI, it is not stored, and Retainer never changes, sends, moves or marks anything in those accounts.</p>
+
     <h2>How the data is used</h2>
-    <p>Mail, calendar events, contacts and Drive files are used only to show them to the owner in Retainer and to organise them, in Retainer and, when the owner asks, in Gmail: working out which client a message belongs to, whether it needs a reply, how urgent it is, and whether it is a receipt. It is not used for advertising, sold, or shared for any other purpose.</p>
+    <p>Mail, calendar events, contacts and Drive files are used only to show them to the owner in Retainer and to organise them, in Retainer and, when the owner asks, in Gmail: working out which client a message belongs to, whether it needs a reply, how urgent it is, whether it is a receipt, and what it asks the owner to do. It is not used for advertising, sold, or shared for any other purpose.</p>
 
     <h2>Where it is stored</h2>
     <ul>
@@ -71,7 +74,14 @@ footer a { margin-right: 16px; }
     </ul>
 
     <h2>Who else processes it</h2>
-    <p>To sort mail, the text of each message is sent to OpenAI's API, which returns judgements such as "needs a reply". OpenAI processes it under its API terms, which do not allow the data to be used to train its models. No other third party receives Google data.</p>
+    <p>Some of Retainer's work is done by OpenAI's API, which is sent the text of the email concerned:</p>
+    <ul>
+      <li><strong>Sorting:</strong> each message, to judge things such as whether it needs a reply.</li>
+      <li><strong>Summaries:</strong> a long message the owner opens, to write a short summary of it, which is then kept.</li>
+      <li><strong>Replies:</strong> when the owner asks for a draft: the conversation they are replying to, the recipient's name, the client's name and description, and a few of the owner's own sent emails so the draft sounds like them. The owner reads and edits every draft, and nothing is sent until they press Send.</li>
+      <li><strong>Tasks:</strong> recent messages that look like they ask the owner to do something, to suggest tasks from them. Suggestions are kept in Retainer for the owner to keep or dismiss, and nothing is changed in Gmail.</li>
+    </ul>
+    <p>OpenAI processes this data under its API terms, which do not allow it to be used to train its models. Calendar events and Drive files are not sent to OpenAI, and from contacts only the name of the person being replied to is. No other third party receives Google data.</p>
 
     <h2>Google API Services User Data Policy</h2>
     <p>Retainer's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
