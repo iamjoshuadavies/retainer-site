@@ -45,7 +45,7 @@ footer a { margin-right: 16px; }
     <header><a href="index.html" style="text-decoration:none;color:inherit"><span class="mark" aria-hidden="true"></span><span class="name">Retainer</span></a></header>
 
     <h1>Privacy policy</h1>
-    <p class="lede">Last updated 26 November 2026 (Retainer's server and its data moved from the owner's own computer to the owner's Google Cloud project in London; on 25 November 2026: an AI assistant the owner connects can read Retainer, Calendar and Mail on the owner's Mac, how OpenAI is used, and suggestions of mail that could be archived or moved to the Bin).</p>
+    <p class="lede">Last updated 26 November 2026 (what the Retainer iPhone app keeps on the phone; Retainer's server and its data moved from the owner's own computer to the owner's Google Cloud project in London; on 25 November 2026: an AI assistant the owner connects can read Retainer, Calendar and Mail on the owner's Mac, how OpenAI is used, and suggestions of mail that could be archived or moved to the Bin).</p>
 
     <h2>Who this covers</h2>
     <p>Retainer is a private tool used by a single person, its owner, Josh Davies. It is not offered to the public. This policy describes how Retainer handles data from the Google accounts its owner connects to it.</p>
@@ -71,6 +71,8 @@ footer a { margin-right: 16px; }
       <li>Mail, calendar events, contact details, filed documents and sign-in tokens are stored in a database in the owner's own Google Cloud project, in Google's London region, and Retainer's server runs there too.</li>
       <li>They are encrypted at rest, with a separate key for each connected account, on top of the encryption Google Cloud applies to everything it stores.</li>
       <li>Only Retainer's server, and the owner through Google Cloud's own sign-in, can connect to the database. Retainer's server is on the internet, but answers only the owner's own devices, each with a key of its own that the owner can revoke, and assistants the owner connects (below).</li>
+      <li>The Retainer iPhone app keeps a copy of what it last loaded, so it opens when the phone is offline: the list of clients, the Home queue, the 50 newest emails' senders, subjects and previews, the next four weeks of calendar events, and tasks. It never stores whole emails or photos. The copy stays on that phone, left out of iCloud and other backups, and is encrypted so it can't be read while the phone is locked. The phone's key to Retainer is kept in that phone's keychain, which isn't synced to other devices. Signing out deletes both, and so does revoking the phone in Retainer, the next time the app connects.</li>
+      <li>When the owner opens an email in a Retainer app, any pictures in it are loaded from wherever the sender keeps them, as in most mail apps, which can tell the sender it was opened.</li>
       <li>Google Cloud keeps daily backups of the database for 7 days, and the server's logs for 30 days. The logs record each request's address, time and result, and the address of the device that made it; Retainer is written to keep email addresses, search words and what emails say out of them.</li>
     </ul>
 
