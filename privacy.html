@@ -45,7 +45,7 @@ footer a { margin-right: 16px; }
     <header><a href="index.html" style="text-decoration:none;color:inherit"><span class="mark" aria-hidden="true"></span><span class="name">Retainer</span></a></header>
 
     <h1>Privacy policy</h1>
-    <p class="lede">Last updated 25 November 2026 (an AI assistant the owner connects, such as Claude, can read Retainer to answer the owner's questions; earlier the same day: Calendar and Mail on the owner's Mac, how OpenAI is used, and suggestions of mail that could be archived or moved to the Bin, acted on only when the owner chooses).</p>
+    <p class="lede">Last updated 26 November 2026 (Retainer's server and its data moved from the owner's own computer to the owner's Google Cloud project in London; on 25 November 2026: an AI assistant the owner connects can read Retainer, Calendar and Mail on the owner's Mac, how OpenAI is used, and suggestions of mail that could be archived or moved to the Bin).</p>
 
     <h2>Who this covers</h2>
     <p>Retainer is a private tool used by a single person, its owner, Josh Davies. It is not offered to the public. This policy describes how Retainer handles data from the Google accounts its owner connects to it.</p>
@@ -68,12 +68,14 @@ footer a { margin-right: 16px; }
 
     <h2>Where it is stored</h2>
     <ul>
-      <li>Mail, calendar events, contact details, filed documents and sign-in tokens are stored on a server the owner controls.</li>
-      <li>They are encrypted at rest, with a separate key for each connected account.</li>
-      <li>Only the owner can reach that server.</li>
+      <li>Mail, calendar events, contact details, filed documents and sign-in tokens are stored in a database in the owner's own Google Cloud project, in Google's London region, and Retainer's server runs there too.</li>
+      <li>They are encrypted at rest, with a separate key for each connected account, on top of the encryption Google Cloud applies to everything it stores.</li>
+      <li>Only Retainer's server, and the owner through Google Cloud's own sign-in, can connect to the database. Retainer's server is on the internet, but answers only the owner's own devices, each with a key of its own that the owner can revoke, and assistants the owner connects (below).</li>
+      <li>Google Cloud keeps daily backups of the database for 7 days, and the server's logs for 30 days. The logs record each request's address, time and result, and the address of the device that made it; Retainer is written to keep email addresses, search words and what emails say out of them.</li>
     </ul>
 
     <h2>Who else processes it</h2>
+    <p>Google Cloud runs Retainer's server and database for the owner, under Google Cloud's terms, as a processor: it stores and processes the data only to provide that service, not for its own purposes.</p>
     <p>Some of Retainer's work is done by OpenAI's API, which is sent the text of the email concerned:</p>
     <ul>
       <li><strong>Sorting:</strong> each message, to judge things such as whether it needs a reply.</li>
@@ -91,13 +93,13 @@ footer a { margin-right: 16px; }
       <li>What it reads is sent to the company that runs the assistant, and handled under that company's terms for the product the owner uses (for Claude, Anthropic's).</li>
       <li>Retainer records each time an assistant uses it: what kind of thing it looked at and how many, never what it read.</li>
     </ul>
-    <p>Apart from OpenAI, and an assistant the owner connects, no third party receives Google data.</p>
+    <p>Apart from Google Cloud, which hosts Retainer, OpenAI, and an assistant the owner connects, no third party receives Google data.</p>
 
     <h2>Google API Services User Data Policy</h2>
     <p>Retainer's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
     <h2>Keeping and deleting data</h2>
-    <p>Data is kept while an account stays connected. Disconnecting an account, or revoking Retainer's access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, stops all further access, and the owner deletes that account's stored mail and tokens. To ask about data from your account, contact the address below.</p>
+    <p>Data is kept while an account stays connected. Disconnecting an account, or revoking Retainer's access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, stops all further access, and the owner deletes that account's stored mail and tokens. Deleted data leaves the database's backups within 7 days. To ask about data from your account, contact the address below.</p>
 
     <footer>
       <a href="index.html">Home</a>
